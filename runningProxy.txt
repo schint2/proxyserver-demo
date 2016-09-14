@@ -1,0 +1,21 @@
+To Start Server
+nodemon index.js
+To Hit echoServer
+curl http://localhost:8000/
+To Hit echoServer with Body
+curl http://localhost:8000/ -d sudheer
+To Hit echoServer with Body and Headers
+curl http://localhost:8000/ -d sudheer -H 'foo:boo' -v 
+-v will print on console
+
+To Hit proxyServer with Body and Headers
+curl http://localhost:9000/ -d sudheer -H 'foo:boo' -v 
+
+To Start Server with host
+nodemon index.js --host=google.com
+curl http://localhost:9000/ -d sudheer -H 'foo:boo' -v
+Hit proxyserver with custom url
+curl http://localhost:9000/ -d sudheer -H 'x-destination-url:127.0.0.1:8000' -H 'foo:boo' -v 
+
+To Start Server with host and logFile
+nodemon index.js --host=google.com --logfile=log.txt
